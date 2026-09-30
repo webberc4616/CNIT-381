@@ -1,0 +1,17 @@
+devices:
+ - name: r1
+   interfaces:
+   - name: GigabitEthernet0/0
+     description: Uplink to core
+     ip: 192.168.10.1
+     mask: 255.255.255.0
+   - name: GigabitEthernet0/1
+     description: Users
+     ip: 192.168.20.1
+     mask: 255.255.255.0
+ - name: sw1
+   interfaces:
+   - name: Vlan10
+     description: Management
+     ip: 192.168.10.2
+     mask: 255.255.255.0
