@@ -1,0 +1,22 @@
+name: Config Pipeline
+
+on:
+ push:
+ pull_request:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install tools
+        run: python3 -m pip install -r config-pipeline/requirements.txt
+      - name: Generate and validate configs
+        run: |
+          cd config-pipeline
+          python3 generate.py
+      - name: Upload the generated configs
+        uses: actions/upload-artifact@v5
+        with:
+          name: device-configs
+          path: config-pipeline/configs/
