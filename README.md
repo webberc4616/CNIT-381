@@ -24,4 +24,4 @@ Called the GitHub REST API from Python to read my repo and create an issue.
 Docker, run by GitHub Actions on every push, that opens a GitHub issue
 through the API when the plan has errors.
 
-**Repo:** https://github.com/<webberc4616>/ip-plan-check
+**Repo:** https://github.com/webberc4616/ip-plan-check
